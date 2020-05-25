@@ -1,0 +1,58 @@
+$color-primario: #0000EC;
+$color-menu:#FFFFFF;
+$fontsize-desktop: 48px;
+$background-gradient: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+
+@mixin h2($color) {
+    font-family: 'IBM Plex Sans';
+    font-size: 36px;
+    font-weight: 400;
+    color: $color;
+    letter-spacing: 0;
+    line-height: 42px;
+}
+
+@mixin boton {
+     //tipografia//
+     font-family: 'IBM Plex Mono';
+     font-weight: 500;
+     font-size: 16px;
+     color: #060A24;
+     letter-spacing: 0;
+     text-align: center;
+     line-height: 22px;
+     //layout//
+     background: #00F3BB;
+     border: none;
+     height: 3em;
+     width: 18em;
+     max-width: 100%;
+     //transicion//
+     transition: 0.5s ease-out;
+}
+
+@mixin boton-transition {
+    cursor: pointer;
+    background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+    color: white;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@100;400;600&display=swap%27');
+@import 'header';
+@import 'grid';
+@import 'titulo';
+@import 'episodios';
+@import 'dondevenimos';
+@import 'invitadxs';
+@import 'nuestrostemas';
+@import 'footer';
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+//a:hover del nav
+//grid
+//float

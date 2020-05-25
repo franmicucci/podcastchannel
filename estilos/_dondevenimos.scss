@@ -1,0 +1,59 @@
+.contain-donde-venimos {
+    grid-column: 2 / 12;
+    position: relative;
+    top: -5em;
+    z-index: 40;
+
+    h2{
+        grid-column: 2 / 10;
+        //tipografia//
+        @include h2(#060A24)
+    }
+
+    p{
+        grid-column: 2 / 12;
+        //tipografia//
+        font-family: 'IBM Plex Mono';
+        font-weight: 400;
+        font-size: 14px;
+        color: #060A24;
+        letter-spacing: 0;
+        line-height: 22px;
+    }
+
+    .celular{
+            grid-column: 1 / 13;
+            //layout de img de celular//
+            width: 100%;
+            max-width: 457.6px;
+            height: auto;
+    }
+    
+
+
+    @media (min-width:860px) and (max-width:1060px){
+        display: flex;    
+        justify-content: space-evenly;
+        align-items: center; 
+    }   
+    
+    @media (min-width:1060px){
+        display: flex;    
+        justify-content: space-around;
+        align-items: center;
+        
+        h2{
+            font-size: $fontsize-desktop;
+        }
+
+        .celular{
+            position: relative;
+            top: 3em;
+        }
+        .contain-text {
+            p{
+                grid-column: 2 / 9;
+            }
+        }
+    }
+}

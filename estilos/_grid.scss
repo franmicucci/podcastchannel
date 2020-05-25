@@ -1,0 +1,79 @@
+body {
+    //grid para body en mobile//
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas: 
+    "h"
+    "m"
+    "f";
+
+
+    header {
+        grid-area: h;
+    }
+
+    main {
+        grid-area: m;
+    }
+
+    footer {
+        grid-area: f;
+    }
+
+    //grid para main//
+    main {
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        }
+
+    //grid para episodios//
+    .contain-episodios{
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    
+    }
+
+    //grid para donde venimos//
+    .contain-text{
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    
+    }
+
+    //grid para invitadxs//
+    .contain-invitados{
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        
+    }
+        
+    //grid para footer//
+    footer {
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        }
+
+
+
+ @media (min-width:510px){
+    .contain-titulo {
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows:auto;
+    }
+    .contain-episodios {
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows:auto;
+    }
+
+ }
+
+}
+

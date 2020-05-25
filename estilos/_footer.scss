@@ -1,0 +1,109 @@
+footer {
+    .container-conoce-mas{
+        grid-column: 1 / 13;
+        padding-top: 3em;
+        padding-bottom: 4em;
+        //color de background//
+        background-image: $background-gradient;
+        position: relative;
+        z-index: 10;
+        clip-path: polygon(0 calc(0% + 8vw), 100% 0, 100% 100%, 0 100%);
+        margin-top: 8vw;
+        //flex mobile para container de conoce mas//
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+           
+        @media (min-width:510px) {
+            padding-top: 8em;
+            padding-bottom: 8em;
+        }
+
+        h2{
+        //tipografia//
+        @include h2(#ffffff);
+        text-align: center;
+        }
+
+        @media (min-width:800px) {
+            h2 {
+                font-size: $fontsize-desktop;
+            }
+        }
+
+        .boton {
+            @include boton;
+        }
+        .boton:hover {
+            @include boton-transition;
+        }
+    }
+
+    .container-footer{
+        grid-column: 2 / 12;
+        padding: 2em 0;
+        //display flex// 
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+
+        .rights{
+            font-family: 'IBM Plex Mono';
+            font-weight: 400;
+            font-size: 14px;
+            color: #060A24;
+            letter-spacing: 0;
+            line-height: 22px;
+        }
+
+        .redes-sociales{
+            width: 100%;
+            //display flex//
+            display: flex;
+            justify-content: space-evenly;
+
+            a {
+                text-decoration: none;
+            }
+
+            i {
+                //para que funcionen los iconos//
+                font-family: fontawesome !important;
+                //styling//
+                padding: 1em;
+                color: #060A24;
+                font-style: normal;
+                transition: .1s ease-in-out;
+            }
+
+            //hover del social media//
+            i:hover {
+                cursor: pointer;
+                font-size: larger;
+                color: rgba(6, 10, 36, .7);
+            }
+        }
+
+        //desktop media para footer//
+        @media (min-width:650px) {
+            padding-top: 1em;
+            padding-bottom: 1em;
+            grid-column: 2 / 12;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .rights {
+                font-size: 16px;
+                line-height: 28px;
+            }
+            .redes-sociales {
+                width: 50%;
+                justify-content: flex-end;
+
+                i {
+                    margin: 0 1em;
+                }
+            }
+        }
+    }
+}

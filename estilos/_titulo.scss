@@ -1,0 +1,92 @@
+main {
+    //layout de contenedor de titulo//
+    .contain-titulo {  
+        grid-column: 2 / 11;
+        max-width: 100%;
+        
+    }
+    
+    
+    h1{
+        
+        //tipografia//
+        @include h2(#060A24);
+      
+
+        //layout//
+        margin-bottom: 0;
+
+        .tachado {
+            //tipografia//
+            text-decoration: line-through;
+        }
+        .salto-linea {
+            display: block;
+        }
+    }
+
+    .intro-mobile {
+        //tipografia//
+        font-family: 'IBM Plex Mono';
+        font-weight: 400;
+        font-size: 14px;
+        color: #060A24;
+        letter-spacing: 0;
+        line-height: 22px;
+
+        margin-bottom: 2em;
+    }
+
+    .intro-desktop {
+        display: none;
+    }
+
+    .boton {
+       @include boton;
+    }
+    .boton:hover {
+        @include boton-transition;
+    }
+}
+
+@media (min-width:510px) {
+    main {
+        .contain-titulo {
+            //layout de contenedor de titulo//
+            grid-column: 1 / 12;
+            display: grid;
+            margin-top: 6em;
+        }
+        h1{
+            //tipografia de h1//
+            font-size: 64px;
+            //layout de h1//
+            margin-bottom: 0.2em;
+            grid-column: 2 / 12;
+
+            .punto-azul {
+                color: #0000EC;
+            }
+            .salto-linea {
+                display: inline;
+            }
+        }
+
+        .intro-desktop {
+            //tipografia//
+            line-height: 24px;
+             //layout//
+            display: inline-block;
+            grid-column: 2 / 8;
+        }
+
+        .intro-mobile {
+            display: none;
+        }
+
+        .boton {
+            grid-column: 2 / 12;
+            transition: 0.5s ease-out;
+        }
+    }
+}
